@@ -20,7 +20,7 @@ I use a custom script called `random_wallpaper_i3.sh` to automate theming across
   - **Polybar** (status bar)
   - **Rofi** (application launcher).
 
-> **Note**: The polybar and rofi theming part is a bit slow, but the result is nice.  
+> The polybar and rofi theming part is a bit slow, but the result is nice.  
 > I originally tried using the `pywal` script provided in [adi1090x/polybar-themes](https://github.com/adi1090x/polybar-themes) (this is where I got the initial polybar config), but it didn't preserve the intended shading style of the polybar theme and resulted in poor visuals. So I wrote my own simple script that respects the design better.
 
 > **Note**: Many of the scripts in this repo were originally created for personal use and may include hardcoded file paths or other system-specific details. If you're planning to use them, expect to do some tweaking to get everything working on your setup.
