@@ -14,7 +14,7 @@ Here are the visual components I use in my setup:
 I use a custom script called `random_wallpaper_i3.sh` to automate theming across my system. Here's what it does:
 
 - Picks a random wallpaper from my wallpaper directory.
-- Uses [`pywal`](https://github.com/dylanaraps/pywal) and ['colorthief](https://github.com/lokesh/color-thief)to generate a color scheme based on the selected wallpaper.
+- Uses [`pywal`](https://github.com/dylanaraps/pywal) and ['colorthief'](https://github.com/lokesh/color-thief)to generate a color scheme based on the selected wallpaper.
 - Applies the generated color scheme to:
   - **Alacritty** (terminal emulator)
   - **Polybar** (status bar)
