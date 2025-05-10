@@ -1,0 +1,110 @@
+@-moz-document url-prefix(about:) {
+
+    /*  Removes the scrollbar on some places  */
+    body,
+    html {
+        overflow-y: auto
+    }
+
+    /*  Devtools  */
+    @-moz-document url-prefix(about:devtools) {
+        #toolbox-container {
+            margin-top: 10px !important
+        }
+
+        .devtools-tabbar {
+            background: transparent !important
+        }
+
+        .devtools-tab-line {
+            border-radius: 0 0 5px 5px
+        }
+
+        .customize-animate-enter-done,
+        .customize-menu,
+        .top-site-outer:hover,
+        button {
+            background-color: transparent !important
+        }
+    }
+
+    /*  Newtab  */
+    @-moz-document url("about:home"), url("about:newtab") {
+        body {
+            background-color: #201e21 !important;
+        }
+
+        .search-wrapper .search-handoff-button .fake-caret {
+            top: 13px !important;
+            inset-inline-start: 48px !important
+        }
+
+        .search-wrapper .logo-and-wordmark {
+            opacity: 0.9 !important;
+            order: 1 !important;
+            margin-bottom: 0 !important;
+            flex: 1 !important;
+            flex-basis: 20% !important
+        }
+
+        .search-wrapper .search-handoff-button .fake-caret {
+            top: 13px !important;
+            inset-inline-start: 48px !important
+        }
+
+        .search-wrapper .logo-and-wordmark {
+            opacity: 0.9 !important;
+            order: 1 !important;
+            margin-bottom: 0 !important;
+            flex: 1 !important;
+            flex-basis: 20% !important;
+        }
+
+        .outer-wrapper .search-wrapper {
+            padding: 0px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            align-items: center !important;
+            align-content: space-around !important;
+            gap: 20px 10px !important
+        }
+
+        .search-wrapper .search-inner-wrapper {
+            --newtab-background-color-secondary: #28252a !important;
+            min-height: 42px !important;
+            order: 2 !important;
+            flex: 3 !important;
+            flex-basis: 60% !important;
+            top: 4px !important
+        }
+
+        .search-wrapper .search-inner-wrapper .search-handoff-button .fake-textbox {
+            font-family: "SF Pro Display" !important;
+        }
+
+        .search-wrapper .search-inner-wrapper {
+            min-height: 42px !important;
+            order: 2 !important;
+            flex: 3 !important;
+            flex-basis: 60% !important;
+            top: 4px !important
+        }
+
+        .outer-wrapper.ds-outer-wrapper-breakpoint-override.only-search.visible-logo {
+            display: flex !important;
+            padding-top: 0px !important;
+            vertical-align: middle
+        }
+
+        .customize-menu {
+            border-radius: 10px 0 0 10px !important
+        }
+
+        #root>div {
+            align-items: center;
+            display: flex
+        }
+    }
+}

@@ -1,0 +1,65 @@
+[window]
+opacity = 0.8
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "SFMono Nerd Font"
+style = "Regular"
+
+#[colors.primary]
+# background = "#1F1F1F"
+# BEGIN WAL
+[colors.primary]
+background = '#1F1F1F'
+foreground = '#c8e1ca'
+
+[colors.cursor]
+text   = '#192d21' # Apply background color to color of text inside cursor
+cursor = '#c8e1ca' # Apply foreground color to color of cursor
+
+[colors.vi_mode_cursor]
+text    = '#192d21' # Same as above
+cursor  = '#c8e1ca'
+
+[colors.search.matches]
+foreground = '#192d21' # Same as above
+background = '#c8e1ca' # Apply bright/white color to bg color of matching search
+
+[colors.search.focused_match]
+foreground = 'CellBackground'
+background = 'CellForeground'
+
+[colors.line_indicator]
+foreground = 'None'
+background = 'None'
+
+[colors.footer_bar]
+foreground = '#8c9d8d'
+background = '#c8e1ca'
+
+[colors.selection]
+text       = 'CellBackground'
+background = 'CellForeground'
+
+[colors.normal]
+black   = '#192d21'
+red     = '#05AF8F'
+green   = '#23B896'
+yellow  = '#51B993'
+blue    = '#03CFB0'
+magenta = '#30D0AF'
+cyan    = '#5ECFAA'
+white   = '#c8e1ca'
+
+[colors.bright]
+black   = '#8c9d8d'
+red     = '#05AF8F'
+green   = '#23B896'
+yellow  = '#51B993'
+blue    = '#03CFB0'
+magenta = '#30D0AF'
+cyan    = '#5ECFAA'
+white   = '#c8e1ca'
+# END WAL
