@@ -12,6 +12,6 @@ RANDOM_IMAGE=$(find "$RANDOM_DIR" -type f | shuf -n 1)
 # Set the wallpaper using gsettings
 /usr/bin/feh --bg-scale $RANDOM_IMAGE
 echo $RANDOM_IMAGE > /home/denis/Scripts/current_wallpaper_i3.txt
-wal -i $RANDOM_IMAGE
+wal -s -i $RANDOM_IMAGE
 /home/denis/Scripts/pywal2alacritty.sh
 /home/denis/Scripts/wal2polybar.sh

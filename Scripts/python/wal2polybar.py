@@ -1,20 +1,29 @@
-from PIL import Image
-from colorthief import ColorThief
 import colorsys
+import json
 import os
 import re
 
-# File paths
-WALLPAPER_PATH_FILE = "/home/denis/Scripts/current_wallpaper_i3.txt"
+# Paths
+PYWAL_COLORS_JSON = os.path.expanduser("~/.cache/wal/colors.json")
 POLYBAR_COLORS_FILE = "/home/denis/.config/polybar/shapes/colors.ini"
 ROFI_COLORS_FILE = "/home/denis/.config/rofi/themes/colors.rasi"
+
+def hex_to_rgb(hex_color):
+    hex_color = hex_color.lstrip("#")
+    return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
 
 def rgb_to_hex(rgb):
     return "#{:02X}{:02X}{:02X}".format(*rgb)
 
-def get_dominant_color(image_path):
-    ct = ColorThief(image_path)
-    return ct.get_color(quality=1)
+def get_pywal_dominant_color():
+    if not os.path.exists(PYWAL_COLORS_JSON):
+        raise FileNotFoundError(f"pywal colors file not found: {PYWAL_COLORS_JSON}")
+    
+    with open(PYWAL_COLORS_JSON, "r") as f:
+        colors = json.load(f)
+    
+    # You can choose color0, color1, or "special" background depending on taste
+    return hex_to_rgb(colors["colors"]["color0"])
 
 def generate_shades(rgb, num_shades=8):
     r, g, b = [x / 255.0 for x in rgb]
@@ -30,18 +39,6 @@ def generate_shades(rgb, num_shades=8):
         rgb_shade = (int(r * 255), int(g * 255), int(b * 255))
         shades.append(rgb_to_hex(rgb_shade))
     return shades
-
-def get_wallpaper_path():
-    if not os.path.exists(WALLPAPER_PATH_FILE):
-        raise FileNotFoundError(f"Wallpaper path file not found: {WALLPAPER_PATH_FILE}")
-    
-    with open(WALLPAPER_PATH_FILE, "r") as f:
-        path = f.read().strip()
-    
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Wallpaper image not found at: {path}")
-    
-    return path
 
 def update_polybar_colors(shades):
     with open(POLYBAR_COLORS_FILE, "r") as file:
@@ -67,9 +64,9 @@ def update_rofi_colors(shades):
         lines = file.readlines()
 
     replacements = {
-        "bg1": shades[1] + "FF",  # shade2
-        "bg2": shades[2] + "FF",  # shade3
-        "bg3": shades[3] + "FF",  # shade4
+        "bg1": shades[1] + "FF",
+        "bg2": shades[2] + "FF",
+        "bg3": shades[3] + "FF",
     }
 
     new_lines = []
@@ -90,9 +87,8 @@ def update_rofi_colors(shades):
     print(f"✅ Updated Rofi colors in: {ROFI_COLORS_FILE}")
 
 def main():
-    image_path = get_wallpaper_path()
-    dominant_rgb = get_dominant_color(image_path)
-    shades = generate_shades(dominant_rgb)
+    base_rgb = get_pywal_dominant_color()
+    shades = generate_shades(base_rgb)
     update_polybar_colors(shades)
     update_rofi_colors(shades)
 

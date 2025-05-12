@@ -5,7 +5,7 @@ opacity = 0.8
 size = 14.0
 
 [font.normal]
-family = "SFMono Nerd Font"
+family = "Liga SFMono Nerd Font"
 style = "Regular"
 
 #[colors.primary]
@@ -13,19 +13,19 @@ style = "Regular"
 # BEGIN WAL
 [colors.primary]
 background = '#1F1F1F'
-foreground = '#c8e1ca'
+foreground = '#d3d4e6'
 
 [colors.cursor]
-text   = '#192d21' # Apply background color to color of text inside cursor
-cursor = '#c8e1ca' # Apply foreground color to color of cursor
+text   = '#0d0d12' # Apply background color to color of text inside cursor
+cursor = '#d3d4e6' # Apply foreground color to color of cursor
 
 [colors.vi_mode_cursor]
-text    = '#192d21' # Same as above
-cursor  = '#c8e1ca'
+text    = '#0d0d12' # Same as above
+cursor  = '#d3d4e6'
 
 [colors.search.matches]
-foreground = '#192d21' # Same as above
-background = '#c8e1ca' # Apply bright/white color to bg color of matching search
+foreground = '#0d0d12' # Same as above
+background = '#d3d4e6' # Apply bright/white color to bg color of matching search
 
 [colors.search.focused_match]
 foreground = 'CellBackground'
@@ -36,30 +36,30 @@ foreground = 'None'
 background = 'None'
 
 [colors.footer_bar]
-foreground = '#8c9d8d'
-background = '#c8e1ca'
+foreground = '#9394a1'
+background = '#d3d4e6'
 
 [colors.selection]
 text       = 'CellBackground'
 background = 'CellForeground'
 
 [colors.normal]
-black   = '#192d21'
-red     = '#05AF8F'
-green   = '#23B896'
-yellow  = '#51B993'
-blue    = '#03CFB0'
-magenta = '#30D0AF'
-cyan    = '#5ECFAA'
-white   = '#c8e1ca'
+black   = '#0d0d12'
+red     = '#684D60'
+green   = '#B4726C'
+yellow  = '#546E94'
+blue    = '#9674A1'
+magenta = '#F3758D'
+cyan    = '#43B1DB'
+white   = '#d3d4e6'
 
 [colors.bright]
-black   = '#8c9d8d'
-red     = '#05AF8F'
-green   = '#23B896'
-yellow  = '#51B993'
-blue    = '#03CFB0'
-magenta = '#30D0AF'
-cyan    = '#5ECFAA'
-white   = '#c8e1ca'
+black   = '#9394a1'
+red     = '#684D60'
+green   = '#B4726C'
+yellow  = '#546E94'
+blue    = '#9674A1'
+magenta = '#F3758D'
+cyan    = '#43B1DB'
+white   = '#d3d4e6'
 # END WAL
