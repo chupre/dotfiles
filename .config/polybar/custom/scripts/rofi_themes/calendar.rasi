@@ -1,0 +1,37 @@
+@theme "/home/denis/.config/rofi/themes/launcher.rasi"
+* {
+    font: "FiraCode Nerd Font 12";
+    background: #1e1e2e;
+    foreground: #cdd6f4;
+    selected-normal-background: #89b4fa;
+    selected-normal-foreground: #1e1e2e;
+    border: 0;
+    padding: 0px;
+}
+
+window {
+    width: 14em;
+    location: north;
+    anchor: north;
+    y-offset: 44px;
+    border-radius: 1px;
+}
+
+prompt {
+    enabled: false;
+    padding: 0px;
+}
+
+listview {
+    lines: 10;
+    columns: 1;
+    spacing: 0px;
+}
+
+element {
+    padding: 4px;
+}
+
+inputbar {
+    enabled: false;
+}

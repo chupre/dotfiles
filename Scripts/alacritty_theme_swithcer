@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+THEME_DIR="$HOME/.config/alacritty/themes"
+CONFIG="$HOME/.config/alacritty/alacritty.toml"
+
+selected_theme=$(ls "$THEME_DIR" | fzf --preview "
+  # Clean theme path and handle special characters
+  theme=\"$THEME_DIR/{}\"
+  clean_theme=\$(echo \$theme | tr -d \"'\")  # Remove any single quotes
+  
+  # Update config with hovered theme
+  awk -v new_import=\"import = [\\\"\$clean_theme\\\"]\" '
+    BEGIN { replaced=0 }
+    /^[[:space:]]*import[[:space:]]*=/ {
+      if (!replaced) { print new_import; replaced=1 }
+      next
+    }
+    { print }
+    END { if (!replaced) print new_import }
+  ' \"$CONFIG\" > tmp_config && mv tmp_config \"$CONFIG\"
+  
+  # Reload Alacritty
+  alacritty msg config reload 2>/dev/null || killall -USR1 alacritty 2>/dev/null
+" --preview-window=up:70%)
+
+# Finalize selection (already applied in preview)
+[ -n "$selected_theme" ] && echo "✅ Theme set to $selected_theme"

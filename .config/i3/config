@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:SFMono Nerd Font 12 
+font pango:Inter 12 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -41,7 +41,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-gaps inner 5
+gaps inner 3
 gaps outer 3
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -52,11 +52,11 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #282A2E #282A2E #ffffff #282A2E   #282A2E
-client.focused_inactive #282A2E #282A2E #ffffff #282A2E   #282A2E
-client.unfocused        #282A2E #282A2E #888888 #282A2E   #282A2E
-client.urgent           #282A2E #282A2E #ffffff #282A2E   #282A2E
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #FFFFFF #282A2E #ffffff #282A2E   #FFFFFF
+client.focused_inactive #FFFFFF #282A2E #ffffff #282A2E   #000000
+client.unfocused        #FFFFFF #282A2E #888888 #282A2E   #000000
+client.urgent           #FFFFFF #282A2E #ffffff #282A2E   #FFFFFF
+client.placeholder      #FFFFFF #0c0c0c #ffffff #000000   #FFFFFF
 
 client.background       #ffffff
 
@@ -198,7 +198,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id /home/denis/.config/polybar/launch.sh --shapes 
+exec --no-startup-id /home/denis/.config/polybar/custom/launch.sh
 
 # Removing window title bar
 default_border pixel 0
@@ -219,18 +219,25 @@ exec --no-startup-id xinput set-prop "GXTP7863:00 27C6:01E0 Mouse" "libinput Acc
 
 bindsym $mod+z exec --no-startup-id /home/denis/Scripts/random_wallpaper_i3.sh 
 
-exec xrandr --output eDP --off
-exec xrandr --output HDMI-A-0 --mode 1920x1080 --rate 120
+exec --no-startup-id xrandr --output eDP --off
+exec --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080 --rate 120
 
-exec_always python3 /home/denis/Apps/autotiling/autotiling/main.py
+exec_always --no-startup-id python3 /home/denis/Apps/autotiling/autotiling/main.py
 
-exec setxkbmap -layout us,ru
-exec setxkbmap -option 'grp:alt_shift_toggle'
+exec_always --no-startup-id setxkbmap -layout us,ru
+exec_always --no-startup-id setxkbmap -option 'grp:alt_shift_toggle'
+
+exec --no-startup-id /home/denis/.dotfiles/.config/polybar/custom/scripts/vpn_cache.sh
+exec --no-startup-id nmcli device wifi list --rescan yes 
 
 bindsym Print exec --no-startup-id gnome-screenshot -acf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
 bindsym Shift+Print exec --no-startup-id gnome-screenshot -a
 
 for_window [title="Screenshot"] floating enable
 
-exec_always --no-startup-id pkill dunst
-exec_always --no-startup-id /usr/libexec/mate-notification-daemon/mate-notification-daemon
+for_window [class="Yad" title="yad-calendar"] floating enable
+for_window [class="Yad" title="System Logout"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="io.elementary.desktop.agent-polkit"] floating enable

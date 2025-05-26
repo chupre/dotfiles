@@ -1,3 +1,5 @@
+import = ["/home/denis/.config/alacritty/themes/catppuccin_frappe.toml"]
+
 [window]
 opacity = 0.8
 
@@ -8,58 +10,5 @@ size = 14.0
 family = "Liga SFMono Nerd Font"
 style = "Regular"
 
-#[colors.primary]
-# background = "#1F1F1F"
-# BEGIN WAL
 [colors.primary]
-background = '#1F1F1F'
-foreground = '#d3d4e6'
-
-[colors.cursor]
-text   = '#0d0d12' # Apply background color to color of text inside cursor
-cursor = '#d3d4e6' # Apply foreground color to color of cursor
-
-[colors.vi_mode_cursor]
-text    = '#0d0d12' # Same as above
-cursor  = '#d3d4e6'
-
-[colors.search.matches]
-foreground = '#0d0d12' # Same as above
-background = '#d3d4e6' # Apply bright/white color to bg color of matching search
-
-[colors.search.focused_match]
-foreground = 'CellBackground'
-background = 'CellForeground'
-
-[colors.line_indicator]
-foreground = 'None'
-background = 'None'
-
-[colors.footer_bar]
-foreground = '#9394a1'
-background = '#d3d4e6'
-
-[colors.selection]
-text       = 'CellBackground'
-background = 'CellForeground'
-
-[colors.normal]
-black   = '#0d0d12'
-red     = '#684D60'
-green   = '#B4726C'
-yellow  = '#546E94'
-blue    = '#9674A1'
-magenta = '#F3758D'
-cyan    = '#43B1DB'
-white   = '#d3d4e6'
-
-[colors.bright]
-black   = '#9394a1'
-red     = '#684D60'
-green   = '#B4726C'
-yellow  = '#546E94'
-blue    = '#9674A1'
-magenta = '#F3758D'
-cyan    = '#43B1DB'
-white   = '#d3d4e6'
-# END WAL
+background = "#1F1F1F"

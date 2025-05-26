@@ -1,0 +1,33 @@
+@theme "/home/denis/.config/rofi/themes/launcher.rasi"
+
+configuration {
+    font: "Inter Nerd Font 12";
+}
+
+window {
+    location: north east;
+    anchor: northeast;
+    width: 15%;
+    y-offset: 45px;
+    x-offset: -5px;
+    border-radius: 1px;
+}
+
+listview {
+    lines: 5;
+}
+
+entry {
+    enabled: false;
+}
+
+inputbar {
+    background-color:               @bg1;
+}
+
+prompt {
+    enabled: true;
+    expand: true;
+    font: "Inter Nerd Font 12"; // Use bold for visual title
+}
+
