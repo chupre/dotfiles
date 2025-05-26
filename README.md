@@ -7,7 +7,7 @@
 - **Cursor**: [elementary](https://github.com/kaesetoast/elementary-cursors)
 - **Notificastion daemon**: [dunst](https://github.com/dunst-project/dunst)
 
-[](https://youtu.be/v8Vxe7T77e0?si=_baGzgheT53J2D2D)
+![](images/vid.gif)
 ![](images/1.png)
 ![](images/2.png)
 ![](images/3.png)
