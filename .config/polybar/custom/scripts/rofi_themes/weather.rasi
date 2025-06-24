@@ -1,20 +1,17 @@
 @theme "/home/denis/.config/rofi/themes/launcher.rasi"
+@import "~/.config/polybar/custom/scripts/rofi_themes/window.rasi"
 
 configuration {
     font: "Inter Nerd Font 12";
 }
 
 window {
-    location: north east;
-    anchor: northeast;
     width: 15%;
-    y-offset: 45px;
-    x-offset: -5px;
     border-radius: 1px;
 }
 
 listview {
-    lines: 7;
+    lines: 8;
 }
 
 entry {
@@ -29,8 +26,4 @@ prompt {
     enabled: true;
     expand: true;
     font: "Inter Nerd Font 12"; // Use bold for visual title
-}
-
-element selected {
-    background-color:               @al;
 }

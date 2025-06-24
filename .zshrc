@@ -1,7 +1,15 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-fastfetch --config config
+
+#fastfetch --config config
+
+
+# pfetch
+#export PF_INFO="ascii title os host kernel uptime pkgs memory"
+#/home/denis/Apps/pfetch/pfetch
+
+/home/denis/Apps/fetch-master-6000/fm6000 --file /home/denis/Apps/fetch-master-6000/ascii_arts/custom.txt -c cyan -l 25 -g 15 -m 5
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -9,7 +17,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH=/home/denis/Apps/idea-IC-243.26053.27/bin:/home/denis/Apps/lite:/home/denis/.local/bin:/home/denis/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/denis/Apps/nvim/bin:/home/denis/Apps/networkmanager-dmenu
+export PATH=/home/denis/Apps/idea-IC-243.26053.27/bin:/home/denis/Apps/lite:/home/denis/.local/bin:/home/denis/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/denis/Apps/nvim/bin:/home/denis/Apps/networkmanager-dmenu:~/Apps/zen:/home/denis/.cargo/bin:/home/denis/Apps/pfetch:/home/denis/Apps/wego:/home/denis/Apps/fetch-master-6000:/home/denis/Apps:/home/denis/go/bin
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -97,11 +105,23 @@ alias ls='lsd --oneline'
 alias apt='nala'
 alias sudo='sudo '
 alias vim="nvim"
-alias neofetch="fastfetch --config config"
-alias fastfetch="fastfetch --config config"
+# alias neofetch="fastfetch --config config"
+# alias fastfetch="fastfetch --config config"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export http_proxy="http://127.0.0.1:12334"
 export https_proxy="http://127.0.0.1:12334"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# export LD_LIBRARY_PATH=/home/denis/gcc-15.1.0/lib64:$LD_LIBRARY_PATH
+# export GCC_ROOT=/home/denis/Apps/gcc-15.1.0
+# export PATH="$GCC_ROOT/bin:$PATH"
+# export LD_LIBRARY_PATH="$GCC_ROOT/lib64:$LD_LIBRARY_PATH"
+# export CC=$GCC_ROOT/bin/gcc
+# export CXX=$GCC_ROOT/bin/g++
+#
+export MAVEN_OPTS="--enable-native-access=ALL-UNNAMED --sun-misc-unsafe-memory-access=allow"
+export GEMINI_API_KEY=AIzaSyCeNnXDbHQ56IF_eg3yjvengYXj9U_QbtM

@@ -20,8 +20,8 @@ fi
 
 # If charging, append status label
 extra=""
-if [ "$status" = "Charging" ]; then
-    extra=" ⚡"
+if [ "$status" = "Charging" ] || [ "$status" = "Full" ]; then
+    extra="󱐋 "
 fi
 
-echo "$icon "
+echo "$extra$icon "

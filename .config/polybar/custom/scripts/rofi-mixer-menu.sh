@@ -2,6 +2,10 @@
 
 BASEDIR=$(dirname "$0")
 
+DEVICE_COUNT=$(pw-cli list-objects | grep node.name | grep output | wc -l)
+LINES=$((DEVICE_COUNT + 1))
+sed -i '/listview\s*{/,/}/s/^\(\s*lines:\s*\)[0-9]\+;/\1'"$LINES"';/' "/home/denis/.dotfiles/.config/polybar/custom/scripts/rofi_themes/volume.rasi"
+
 # Run Rofi and capture exit code
 rofi -theme /home/denis/.dotfiles/.config/polybar/custom/scripts/rofi_themes/volume.rasi \
   -kb-custom-16 "Ctrl+equal" \

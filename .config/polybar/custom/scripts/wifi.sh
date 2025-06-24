@@ -21,4 +21,4 @@ else
     fi
 fi
 
-echo $icon
+echo "$icon"

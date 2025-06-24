@@ -1,0 +1,8 @@
+window {
+    location: north east;
+    anchor: northeast;
+    y-offset: 50px;
+    x-offset: -12px;
+    border-radius: 1px;
+}
+

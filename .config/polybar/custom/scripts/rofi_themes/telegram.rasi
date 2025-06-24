@@ -1,0 +1,31 @@
+@theme "/home/denis/.config/rofi/themes/launcher.rasi"
+@import "~/.config/polybar/custom/scripts/rofi_themes/window.rasi"
+
+configuration {
+    font: "Inter Nerd Font 12";
+}
+
+window {
+    width: 13%;
+    border-radius: 1px;
+}
+
+listview {
+    lines: 3;
+}
+
+entry {
+    enabled: false;
+}
+
+inputbar {
+    background-color:               @bg1;
+}
+
+prompt {
+    enabled: true;
+    expand: true;
+    font: "Inter Nerd Font 12"; // Use bold for visual title
+}
+
+

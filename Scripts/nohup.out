@@ -1,0 +1,394 @@
+[LOG] Welcome to hyprpaper!
+built from commit 99213a1854d172c529e815834e5b43dab95a3b67 (    flake.lock: update)
+[LOG] Cleaned old hyprpaper preloads (1), removing 8.3MB
+[LOG] Preloaded target /home/denis/Pictures/walls/calm/a_street_with_buildings_and_power_lines.jpg in 249.61ms -> Pixel size: [2048, 1463]
+[LOG] Buffer created for target /home/denis/Pictures/walls/calm/a_street_with_buildings_and_power_lines.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] hyprpaper socket started at /run/user/1000/hypr/4078e1d17c0fb1439ee5a0ba1e539f06a8f47aab_1748765720_32582979/.hyprpaper.sock (fd: 6)
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/calm/a_street_with_buildings_and_power_lines.jpg at [0.00, -155.50], scale: 0.94 (original image size: [2048, 1463])
+[LOG] Submitting viewport dest size 1920x1080 for 13af5780
+[LOG] handlePreferredScale: 1.00 for 13af5780
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: hyprpaper
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: listactive
+[LOG] numWallpapersActive: 2
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/aerial/satellite_dishes_on_a_building.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/aerial/satellite_dishes_on_a_building.jpg in 179.70ms -> Pixel size: [5760, 3840]
+[LOG] Buffer created for target /home/denis/Pictures/walls/aerial/satellite_dishes_on_a_building.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 16.6MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper /home/denis/Pictures/walls/aerial/satellite_dishes_on_a_building.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/aerial/satellite_dishes_on_a_building.jpg, preload path /run/user/1000/.hyprpaper_ItG5m7
+[LOG] Unloading target /home/denis/Pictures/walls/calm/a_street_with_buildings_and_power_lines.jpg, preload path /run/user/1000/.hyprpaper_UQBmmc
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/mine/liubn3ncfvke1.jpeg
+[LOG] Preloaded target /home/denis/Pictures/walls/mine/liubn3ncfvke1.jpeg in 436.43ms -> Pixel size: [11280, 5673]
+[LOG] Buffer created for target /home/denis/Pictures/walls/mine/liubn3ncfvke1.jpeg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/mine/liubn3ncfvke1.jpeg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/mine/liubn3ncfvke1.jpeg at [-597.33, 0.00], scale: 0.19 (original image size: [11280, 5673])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd40014d0
+[LOG] handlePreferredScale: 1.00 for 7a5bd40014d0
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/cherry/a_branch_with_pink_flowers_02.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/cherry/a_branch_with_pink_flowers_02.jpg in 669.42ms -> Pixel size: [9504, 5346]
+[LOG] Buffer created for target /home/denis/Pictures/walls/cherry/a_branch_with_pink_flowers_02.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 16.6MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/cherry/a_branch_with_pink_flowers_02.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/cherry/a_branch_with_pink_flowers_02.jpg at [-0.00, 0.00], scale: 0.20 (original image size: [9504, 5346])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd40015c0
+[LOG] handlePreferredScale: 1.00 for 7a5bd40015c0
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/cherry/a_branch_with_pink_flowers_02.jpg, preload path /run/user/1000/.hyprpaper_zSOZB3
+[LOG] Unloading target /home/denis/Pictures/walls/mine/liubn3ncfvke1.jpeg, preload path /run/user/1000/.hyprpaper_V2k6I1
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/halloween/a_person_holding_a_skull_and_pumpkins.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/halloween/a_person_holding_a_skull_and_pumpkins.jpg in 281.26ms -> Pixel size: [5311, 3541]
+[LOG] Buffer created for target /home/denis/Pictures/walls/halloween/a_person_holding_a_skull_and_pumpkins.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/halloween/a_person_holding_a_skull_and_pumpkins.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/halloween/a_person_holding_a_skull_and_pumpkins.jpg at [0.00, -276.78], scale: 0.36 (original image size: [5311, 3541])
+[LOG] Submitting viewport dest size 1920x1080 for 13af5940
+[LOG] handlePreferredScale: 1.00 for 13af5940
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/halloween/a_person_holding_a_skull_and_pumpkins.jpg, preload path /run/user/1000/.hyprpaper_rZ6r4Z
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/radium/a_mountain_range_at_night.png
+[LOG] Preloaded target /home/denis/Pictures/walls/radium/a_mountain_range_at_night.png in 267.87ms -> Pixel size: [3840, 2160]
+[LOG] Buffer created for target /home/denis/Pictures/walls/radium/a_mountain_range_at_night.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/radium/a_mountain_range_at_night.png
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/radium/a_mountain_range_at_night.png at [-0.00, 0.00], scale: 0.50 (original image size: [3840, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004140
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004140
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/radium/a_mountain_range_at_night.png, preload path /run/user/1000/.hyprpaper_bA5Q3S
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/spam/a_pixel_art_of_a_sword_and_whale.png
+[LOG] Preloaded target /home/denis/Pictures/walls/spam/a_pixel_art_of_a_sword_and_whale.png in 214.16ms -> Pixel size: [3840, 2160]
+[LOG] Buffer created for target /home/denis/Pictures/walls/spam/a_pixel_art_of_a_sword_and_whale.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/spam/a_pixel_art_of_a_sword_and_whale.png
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/spam/a_pixel_art_of_a_sword_and_whale.png at [-0.00, 0.00], scale: 0.50 (original image size: [3840, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004840
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004840
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/spam/a_pixel_art_of_a_sword_and_whale.png, preload path /run/user/1000/.hyprpaper_uZcr32
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/nature/a_close_up_of_moss_on_a_branch.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/nature/a_close_up_of_moss_on_a_branch.jpg in 317.18ms -> Pixel size: [6024, 3388]
+[LOG] Buffer created for target /home/denis/Pictures/walls/nature/a_close_up_of_moss_on_a_branch.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/nature/a_close_up_of_moss_on_a_branch.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/nature/a_close_up_of_moss_on_a_branch.jpg at [-0.44, 0.00], scale: 0.32 (original image size: [6024, 3388])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004880
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004880
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/nature/a_close_up_of_moss_on_a_branch.jpg, preload path /run/user/1000/.hyprpaper_ix4lks
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/chillop/a_cartoon_of_a_cat_01.png
+[LOG] Preloaded target /home/denis/Pictures/walls/chillop/a_cartoon_of_a_cat_01.png in 147.62ms -> Pixel size: [3840, 2160]
+[LOG] Buffer created for target /home/denis/Pictures/walls/chillop/a_cartoon_of_a_cat_01.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/chillop/a_cartoon_of_a_cat_01.png
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/chillop/a_cartoon_of_a_cat_01.png at [-0.00, 0.00], scale: 0.50 (original image size: [3840, 2160])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004140
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004140
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/chillop/a_cartoon_of_a_cat_01.png, preload path /run/user/1000/.hyprpaper_TMoQri
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/gruvbox/a_cup_of_coffee_on_a_table.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/gruvbox/a_cup_of_coffee_on_a_table.jpg in 179.64ms -> Pixel size: [6000, 4000]
+[LOG] Buffer created for target /home/denis/Pictures/walls/gruvbox/a_cup_of_coffee_on_a_table.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/gruvbox/a_cup_of_coffee_on_a_table.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/gruvbox/a_cup_of_coffee_on_a_table.jpg at [0.00, -312.50], scale: 0.32 (original image size: [6000, 4000])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd40048c0
+[LOG] handlePreferredScale: 1.00 for 7a5bd40048c0
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/gruvbox/a_cup_of_coffee_on_a_table.jpg, preload path /run/user/1000/.hyprpaper_t2kcEm
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/apocalypse/a_woman_standing_in_front_of_a_window.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/apocalypse/a_woman_standing_in_front_of_a_window.jpg in 28.69ms -> Pixel size: [1920, 1080]
+[LOG] Buffer created for target /home/denis/Pictures/walls/apocalypse/a_woman_standing_in_front_of_a_window.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/apocalypse/a_woman_standing_in_front_of_a_window.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/apocalypse/a_woman_standing_in_front_of_a_window.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [1920, 1080])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004970
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004970
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/apocalypse/a_woman_standing_in_front_of_a_window.jpg, preload path /run/user/1000/.hyprpaper_zRiutL
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/tile/a_computer_screen_shot_of_a_computer_disk.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/tile/a_computer_screen_shot_of_a_computer_disk.jpg in 140.94ms -> Pixel size: [2880, 1800]
+[LOG] Buffer created for target /home/denis/Pictures/walls/tile/a_computer_screen_shot_of_a_computer_disk.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/tile/a_computer_screen_shot_of_a_computer_disk.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/tile/a_computer_screen_shot_of_a_computer_disk.jpg at [0.00, -90.00], scale: 0.67 (original image size: [2880, 1800])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd40055c0
+[LOG] handlePreferredScale: 1.00 for 7a5bd40055c0
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/tile/a_computer_screen_shot_of_a_computer_disk.jpg, preload path /run/user/1000/.hyprpaper_cTunIj
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/architecture/a_city_with_tall_buildings.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/architecture/a_city_with_tall_buildings.jpg in 224.70ms -> Pixel size: [3583, 2376]
+[LOG] Buffer created for target /home/denis/Pictures/walls/architecture/a_city_with_tall_buildings.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/architecture/a_city_with_tall_buildings.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/architecture/a_city_with_tall_buildings.jpg at [0.00, -180.28], scale: 0.54 (original image size: [3583, 2376])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004840
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004840
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/architecture/a_city_with_tall_buildings.jpg, preload path /run/user/1000/.hyprpaper_8wESsu
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/poly/a_purple_pyramid_in_the_desert.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/poly/a_purple_pyramid_in_the_desert.jpg in 14.72ms -> Pixel size: [1920, 1080]
+[LOG] Buffer created for target /home/denis/Pictures/walls/poly/a_purple_pyramid_in_the_desert.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/poly/a_purple_pyramid_in_the_desert.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/poly/a_purple_pyramid_in_the_desert.jpg at [-0.00, 0.00], scale: 1.00 (original image size: [1920, 1080])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004140
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004140
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/poly/a_purple_pyramid_in_the_desert.jpg, preload path /run/user/1000/.hyprpaper_VFBYpW
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/centered/a_painting_of_a_city.png
+[LOG] Preloaded target /home/denis/Pictures/walls/centered/a_painting_of_a_city.png in 29.31ms -> Pixel size: [2500, 1406]
+[LOG] Buffer created for target /home/denis/Pictures/walls/centered/a_painting_of_a_city.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/centered/a_painting_of_a_city.png
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/centered/a_painting_of_a_city.png at [-0.22, 0.00], scale: 0.77 (original image size: [2500, 1406])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4005dd0
+[LOG] handlePreferredScale: 1.00 for 7a5bd4005dd0
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/centered/a_painting_of_a_city.png, preload path /run/user/1000/.hyprpaper_oI8E84
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/gruvbox/a_cartoon_of_a_wolf_and_a_knight_sitting_on_a_dog.png
+[LOG] Preloaded target /home/denis/Pictures/walls/gruvbox/a_cartoon_of_a_wolf_and_a_knight_sitting_on_a_dog.png in 18.22ms -> Pixel size: [1202, 676]
+[LOG] Buffer created for target /home/denis/Pictures/walls/gruvbox/a_cartoon_of_a_wolf_and_a_knight_sitting_on_a_dog.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/gruvbox/a_cartoon_of_a_wolf_and_a_knight_sitting_on_a_dog.png
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/gruvbox/a_cartoon_of_a_wolf_and_a_knight_sitting_on_a_dog.png at [-0.11, 0.00], scale: 1.60 (original image size: [1202, 676])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004840
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004840
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/gruvbox/a_cartoon_of_a_wolf_and_a_knight_sitting_on_a_dog.png, preload path /run/user/1000/.hyprpaper_LcxZdZ
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/poly/a_video_game_screen_with_a_diamond_and_green_lights.png
+[LOG] Preloaded target /home/denis/Pictures/walls/poly/a_video_game_screen_with_a_diamond_and_green_lights.png in 139.05ms -> Pixel size: [4261, 2245]
+[LOG] Buffer created for target /home/denis/Pictures/walls/poly/a_video_game_screen_with_a_diamond_and_green_lights.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/poly/a_video_game_screen_with_a_diamond_and_green_lights.png
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/poly/a_video_game_screen_with_a_diamond_and_green_lights.png at [-134.94, 0.00], scale: 0.48 (original image size: [4261, 2245])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd40045b0
+[LOG] handlePreferredScale: 1.00 for 7a5bd40045b0
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/poly/a_video_game_screen_with_a_diamond_and_green_lights.png, preload path /run/user/1000/.hyprpaper_3ZBFEB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/pixel/a_pixel_art_of_a_city_street.png
+[LOG] Preloaded target /home/denis/Pictures/walls/pixel/a_pixel_art_of_a_city_street.png in 399.03ms -> Pixel size: [5760, 2880]
+[LOG] Buffer created for target /home/denis/Pictures/walls/pixel/a_pixel_art_of_a_city_street.png, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/pixel/a_pixel_art_of_a_city_street.png
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/pixel/a_pixel_art_of_a_city_street.png at [-320.00, 0.00], scale: 0.38 (original image size: [5760, 2880])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd40050c0
+[LOG] handlePreferredScale: 1.00 for 7a5bd40050c0
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/pixel/a_pixel_art_of_a_city_street.png, preload path /run/user/1000/.hyprpaper_CDyZ8S
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/fogsmoke/a_foggy_mountain_with_trees_02.jpg
+[LOG] Preloaded target /home/denis/Pictures/walls/fogsmoke/a_foggy_mountain_with_trees_02.jpg in 157.34ms -> Pixel size: [6016, 4016]
+[LOG] Buffer created for target /home/denis/Pictures/walls/fogsmoke/a_foggy_mountain_with_trees_02.jpg, Shared Memory usage: 8.3MB
+[LOG] Total SM usage for all buffers: 8.3MB
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: wallpaper ,/home/denis/Pictures/walls/fogsmoke/a_foggy_mountain_with_trees_02.jpg
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] configure for HDMI-A-1
+[LOG] configure for HDMI-A-1
+[LOG] Image data for HDMI-A-1: /home/denis/Pictures/walls/fogsmoke/a_foggy_mountain_with_trees_02.jpg at [0.00, -316.00], scale: 0.32 (original image size: [6016, 4016])
+[LOG] Submitting viewport dest size 1920x1080 for 7a5bd4004840
+[LOG] handlePreferredScale: 1.00 for 7a5bd4004840
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: unload all
+[LOG] Unloading target /home/denis/Pictures/walls/fogsmoke/a_foggy_mountain_with_trees_02.jpg, preload path /run/user/1000/.hyprpaper_b167Ul
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Closing Accepted Connection
+[LOG] Accepted incoming socket connection request on fd 5
+[LOG] Received a request: preload /home/denis/Pictures/walls/geometry/README.md
+[CRITICAL] Cannot load image /home/denis/Pictures/walls/geometry/README.md: unrecognized image

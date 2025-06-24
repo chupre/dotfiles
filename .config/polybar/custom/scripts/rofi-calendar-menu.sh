@@ -29,7 +29,7 @@ CAL=$(ncal -b -h -M -d "$TARGET_DATE")
 
 # Highlight today's day if in current month
 if [[ "$TARGET_YEAR" == "$TODAY_YEAR" && "$TARGET_MONTH" == "$TODAY_MONTH" ]]; then
-    CAL=$(echo "$CAL" | sed -E "s/(^|[^0-9])($TODAY_DAY)([^0-9]|$)/\1<span foreground='red'><b>\2<\/b><\/span>\3/g")
+    CAL=$(echo "$CAL" | sed -E "s/(^|[^0-9])($TODAY_DAY)([^0-9]|$)/\1<span foreground='#0860f2e6'><b>\2<\/b><\/span>\3/g")
 fi
 
 # Build menu

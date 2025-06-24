@@ -1,13 +1,13 @@
-import = ["/home/denis/.config/alacritty/themes/catppuccin_frappe.toml"]
+import = ["/home/denis/.config/alacritty/themes/ayu_mirage.toml"]
 
 [window]
 opacity = 0.8
 
 [font]
-size = 14.0
+size = 16.0
 
 [font.normal]
-family = "Liga SFMono Nerd Font"
+family = "SpaceMono Nerd Font"
 style = "Regular"
 
 [colors.primary]

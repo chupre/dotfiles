@@ -10,7 +10,10 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = { { 'nvim-lua/plenary.nvim' },
+            { 'nvim-lua/popup.nvim' },
+            { 'nvim-telescope/telescope-media-files.nvim' }
+        }
     }
 
     use({
@@ -85,6 +88,8 @@ return require('packer').startup(function(use)
 
     use("stevearc/oil.nvim")
 
+    use("mfussenegger/nvim-jdtls")
+
     use({
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -121,16 +126,18 @@ return require('packer').startup(function(use)
                     lua = { "stylua" },
                     c = { "clang-format" },
                     html = { "htmlbeautifier" },
-                    javascript = { "prettierd", "prettier", stop_after_first = true },
+                    javascript = { "biome" },
+                    javascriptreact = { "biome" },
                     css = { "prettierd", "prettier", stop_after_first = true },
-                    java = { "astyle" }
+                    java = { "astyle" },
+                    xml = { "xmlformatter" },
                 }
             })
         end,
     })
     use({
         "xiyaowong/transparent.nvim",
-        config = function ()
+        config = function()
             -- Optional, you don't have to run setup.
             require("transparent").setup({
                 -- table: default groups
@@ -152,4 +159,3 @@ return require('packer').startup(function(use)
         end
     })
 end)
-

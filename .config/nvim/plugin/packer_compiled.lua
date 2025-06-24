@@ -90,7 +90,7 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["conform.nvim"] = {
-    config = { "\27LJ\2\nê\2\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\2B\0\2\1K\0\1\0\21formatters_by_ft\1\0\1\21formatters_by_ft\0\tjava\1\2\0\0\vastyle\bcss\1\3\1\0\14prettierd\rprettier\21stop_after_first\2\15javascript\1\3\1\0\14prettierd\rprettier\21stop_after_first\2\thtml\1\2\0\0\19htmlbeautifier\6c\1\2\0\0\17clang-format\blua\1\0\6\thtml\0\tjava\0\bcss\0\blua\0\15javascript\0\6c\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
+    config = { "\27LJ\2\n \3\0\0\5\0\22\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\20\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\0035\4\16\0=\4\17\0035\4\18\0=\4\19\3=\3\21\2B\0\2\1K\0\1\0\21formatters_by_ft\1\0\1\21formatters_by_ft\0\bxml\1\2\0\0\17xmlformatter\tjava\1\2\0\0\vastyle\bcss\1\3\1\0\14prettierd\rprettier\21stop_after_first\2\20javascriptreact\1\2\0\0\nbiome\15javascript\1\2\0\0\nbiome\thtml\1\2\0\0\19htmlbeautifier\6c\1\2\0\0\17clang-format\blua\1\0\b\thtml\0\blua\0\bxml\0\bcss\0\20javascriptreact\0\6c\0\15javascript\0\tjava\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/denis/.local/share/nvim/site/pack/packer/start/nvim-highlight-colors",
     url = "https://github.com/brenoprata10/nvim-highlight-colors"
   },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/home/denis/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/denis/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -200,6 +205,11 @@ _G.packer_plugins = {
     path = "/home/denis/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/denis/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
+  },
   ["pywal16.nvim"] = {
     loaded = true,
     path = "/home/denis/.local/share/nvim/site/pack/packer/start/pywal16.nvim",
@@ -209,6 +219,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/denis/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/home/denis/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -240,14 +255,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-highlight-colors
-time([[Config for nvim-highlight-colors]], true)
-try_loadstring("\27LJ\2\n\\\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\vrender\15background\nsetup\26nvim-highlight-colors\frequire\0", "config", "nvim-highlight-colors")
-time([[Config for nvim-highlight-colors]], false)
--- Config for: lsp_signature.nvim
-time([[Config for lsp_signature.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
-time([[Config for lsp_signature.nvim]], false)
 -- Config for: transparent.nvim
 time([[Config for transparent.nvim]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0¨\3\1\0\4\0\n\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0024\3\0\0=\3\6\0024\3\0\0=\3\a\0023\3\b\0=\3\t\2B\0\2\1K\0\1\0\ron_clear\0\19exclude_groups\17extra_groups\vgroups\1\0\4\ron_clear\0\vgroups\0\19exclude_groups\0\17extra_groups\0\1\26\0\0\vNormal\rNormalNC\fComment\rConstant\fSpecial\15Identifier\14Statement\fPreProc\tType\15Underlined\tTodo\vString\rFunction\16Conditional\vRepeat\rOperator\14Structure\vLineNr\fNonText\15SignColumn\15CursorLine\17CursorLineNr\15StatusLine\17StatusLineNC\16EndOfBuffer\nsetup\16transparent\frequire\0", "config", "transparent.nvim")
@@ -256,6 +263,14 @@ time([[Config for transparent.nvim]], false)
 time([[Config for themery.nvim]], true)
 try_loadstring("\27LJ\2\n±\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\vthemes\1\0\1\vthemes\0\1\v\0\0\14rose-pine\15catppuccin\15tokyonight\fonedark\15cyberdream\vvscode\rnightfox\fsonokai\vnordic\fpywal16\nsetup\fthemery\frequire\0", "config", "themery.nvim")
 time([[Config for themery.nvim]], false)
+-- Config for: lsp_signature.nvim
+time([[Config for lsp_signature.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
+time([[Config for lsp_signature.nvim]], false)
+-- Config for: nvim-highlight-colors
+time([[Config for nvim-highlight-colors]], true)
+try_loadstring("\27LJ\2\n\\\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\vrender\15background\nsetup\26nvim-highlight-colors\frequire\0", "config", "nvim-highlight-colors")
+time([[Config for nvim-highlight-colors]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
