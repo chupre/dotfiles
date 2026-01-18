@@ -60,26 +60,35 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "java",
-  callback = function()
-    local jdtls = require('jdtls')
-    local home = os.getenv("HOME")
-    local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-    local workspace_dir = home .. "/.local/share/eclipse/" .. project_name
+    pattern = "java",
+    callback = function()
+        local jdtls = require('jdtls')
+        local home = os.getenv("HOME")
+        local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+        local workspace_dir = home .. "/.local/share/eclipse/" .. project_name
 
-    local config = {
-      cmd = { '/home/denis/Apps/jdtls/bin/jdtls' },
-      root_dir = jdtls.setup.find_root({'.git', 'mvnw', 'gradlew'}),
-      workspace_folder = workspace_dir,
-      capabilities = capabilities,
-    }
+        local config = {
+            cmd = { '/usr/bin/jdtls' },
+            root_dir = jdtls.setup.find_root({ '.git', 'mvnw', 'gradlew' }),
+            workspace_folder = workspace_dir,
+            capabilities = capabilities,
+        }
 
-    jdtls.start_or_attach(config)
-  end,
+        jdtls.start_or_attach(config)
+    end,
 })
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'clangd', 'lua_ls', 'html', 'cssls', 'biome' },
+    ensure_installed = {
+        'clangd',
+        'lua_ls',
+        'biome',
+        'zls',
+        'gopls',
+        'omnisharp',
+        'glsl_analyzer',
+        'cmake',
+    },
     handlers = {
         function(server_name)
             require('lspconfig')[server_name].setup({

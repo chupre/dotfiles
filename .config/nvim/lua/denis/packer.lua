@@ -35,8 +35,8 @@ return require('packer').startup(function(use)
         as = 'sonokai',
         'AlexvZyl/nordic.nvim',
         as = 'nordic',
-        'uZer/pywal16.nvim',
-        as = 'pywal16'
+        'datsfilipe/vesper.nvim',
+        as = 'vesper',
     })
 
     use({
@@ -53,7 +53,8 @@ return require('packer').startup(function(use)
                     'nightfox',
                     'sonokai',
                     'nordic',
-                    'pywal16',
+                    'vim',
+                    'vesper',
                 }
             })
         end
@@ -158,4 +159,8 @@ return require('packer').startup(function(use)
             })
         end
     })
+
+    use "OXY2DEV/markview.nvim"
+
+    use 'Civitasv/cmake-tools.nvim'
 end)

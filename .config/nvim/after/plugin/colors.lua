@@ -1,6 +1,6 @@
 function MyColor(color)
-	color = color 
+	color = color
 	vim.cmd.colorscheme(color)
 end
 
-MyColor()
+MyColor(preferred_colorscheme)
