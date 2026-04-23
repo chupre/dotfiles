@@ -20,3 +20,6 @@ vim.pack.add({
 })
 require("nvim-autopairs").setup({})
 
+vim.pack.add({
+    { src = "https://github.com/blazkowolf/gruber-darker.nvim" }
+})

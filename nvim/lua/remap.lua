@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>n", "<CMD>noh<CR>")
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 
 vim.keymap.set("i", "<Tab>", function()
   return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
@@ -15,6 +17,9 @@ vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>ps', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
+vim.keymap.set('n', '<leader>pe', function()
+    builtin.diagnostics()
+end, { desc = 'LSP Diagnostics' })
 vim.keymap.set('n', '<leader>gr', function()
     builtin.lsp_references()
 end, { desc = 'LSP References' })
