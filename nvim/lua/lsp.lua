@@ -1,6 +1,9 @@
 vim.lsp.enable({
     "lua_ls",
     "ols",
+    "gopls",
+    "vtsls",
+    "clangd",
 })
 
 vim.lsp.config("ols", {
@@ -10,5 +13,8 @@ vim.lsp.config("ols", {
 			{ name = "odin-sr", path = vim.fn.expand('$HOME/code/odin_sr/src') }
 		},
 	},
+})
+
+vim.lsp.config("clangd", {
 })
 
