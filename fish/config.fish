@@ -1,12 +1,8 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    set -U fish_greeting
 end
 
-alias ls="exa --icons"
+alias ls="exa --all --git --icons --header --long --reverse --no-user --no-permissions"
 alias vi="nvim"
 alias vim="nvim"
 alias tmux="/home/denis/bin/wtmux.sh"
-alias todo="nvim ~/.TODO"
-
-# opencode
-fish_add_path /home/denis/.opencode/bin

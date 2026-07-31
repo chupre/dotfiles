@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Minimal Arch installations may not include inetutils' hostname binary.
+exec uname -n

@@ -1,58 +1,87 @@
 #!/usr/bin/env bash
 
-# Path to tmux-resurrect save/restore scripts
-RESURRECT_SAVE="$HOME/.tmux/plugins/tmux-resurrect/scripts/save.sh"
-RESURRECT_RESTORE="$HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh"
-RESURRECT_DIR="$HOME/.local/share/tmux/resurrect"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PATH="$SCRIPT_DIR:$PATH"
+
+TMUX_BIN="${TMUX_BIN:-tmux}"
+FZF_BIN="${FZF_BIN:-fzf}"
+RESURRECT_SAVE="${RESURRECT_SAVE:-$HOME/.tmux/plugins/tmux-resurrect/scripts/save.sh}"
+RESURRECT_RESTORE="${RESURRECT_RESTORE:-$HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh}"
+RESURRECT_DIR="${RESURRECT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/tmux/resurrect}"
+RESTORE_SESSION="__wtmux_restore__"
+
+warn_missing_persistence() {
+    if [[ ! -x "$RESURRECT_SAVE" ]] || [[ ! -x "$RESURRECT_RESTORE" ]]; then
+        printf 'Warning: tmux-resurrect is not installed under ~/.tmux/plugins.\n' >&2
+        printf 'Install TPM plugins with prefix + I; persistence is currently disabled.\n' >&2
+    fi
+}
+
+restore_saved_environment() {
+    local sessions="$1"
+    local last_save="$RESURRECT_DIR/last"
+
+    [[ -n "$sessions" ]] && return
+    [[ -f "$last_save" ]] || return
+    [[ -x "$RESURRECT_RESTORE" ]] || return
+
+    printf 'Restoring saved tmux environment...\n'
+    "$TMUX_BIN" new-session -d -s "$RESTORE_SESSION" -c "$HOME" || return
+    "$TMUX_BIN" set-option -g @resurrect-dir "$RESURRECT_DIR"
+
+    local tmux_env
+    tmux_env=$("$TMUX_BIN" display-message -p '#{socket_path},#{pid},0')
+    if [[ -z "$tmux_env" ]]; then
+        printf 'Warning: could not resolve the tmux server socket.\n' >&2
+        "$TMUX_BIN" kill-session -t "$RESTORE_SESSION" 2>/dev/null
+        return
+    fi
+
+    local restore_output
+    if ! restore_output=$(TMUX="$tmux_env" "$RESURRECT_RESTORE" 2>&1); then
+        printf 'Warning: tmux-resurrect restore failed.\n' >&2
+        [[ -n "$restore_output" ]] && printf '%s\n' "$restore_output" >&2
+        "$TMUX_BIN" kill-session -t "$RESTORE_SESSION" 2>/dev/null
+        return
+    fi
+
+    # Resurrect normally replaces the single bootstrap pane. Remove it if a
+    # plugin/version leaves it behind alongside restored sessions.
+    if "$TMUX_BIN" has-session -t "$RESTORE_SESSION" 2>/dev/null; then
+        local session_count
+        session_count=$("$TMUX_BIN" list-sessions -F '#{session_name}' 2>/dev/null | wc -l)
+        if (( session_count > 1 )); then
+            "$TMUX_BIN" kill-session -t "$RESTORE_SESSION"
+        else
+            printf 'Warning: snapshot did not restore any tmux sessions.\n' >&2
+            [[ -n "$restore_output" ]] && printf '%s\n' "$restore_output" >&2
+            "$TMUX_BIN" kill-session -t "$RESTORE_SESSION"
+        fi
+    fi
+}
+
+warn_missing_persistence
 
 while true; do
     # Get existing session names
-    sessions=$(tmux list-sessions -F "#{session_name}" 2>/dev/null)
+    sessions=$("$TMUX_BIN" list-sessions -F '#{session_name}' 2>/dev/null)
 
-    # Auto-restore if we have saved sessions but no running sessions
-    if [[ -z "$sessions" ]] && [[ -d "$RESURRECT_DIR" ]]; then
-        # Check if there's a last save file
-        last_save="$RESURRECT_DIR/last"
-        [[ ! -e "$last_save" ]] && last_save=$(ls -t "$RESURRECT_DIR"/tmux_resurrect_*.txt 2>/dev/null | head -1)
-        
-        if [[ -f "$last_save" ]]; then
-            echo "Restoring saved sessions..."
-            # Extract unique session names with their first working directory
-            declare -A session_dirs
-            while IFS=$'\t' read -r type session_name window_idx pane_idx flags active work_dir full_path rest; do
-                if [[ "$type" == "pane" ]] && [[ -n "$session_name" ]] && [[ ! -v session_dirs[$session_name] ]]; then
-                    # Remove leading colon from path
-                    work_path="${full_path#:}"
-                    session_dirs[$session_name]="$work_path"
-                fi
-            done < "$last_save"
-            
-            # Create sessions
-            for session_name in "${!session_dirs[@]}"; do
-                work_path="${session_dirs[$session_name]}"
-                if ! tmux has-session -t "$session_name" 2>/dev/null; then
-                    tmux new-session -d -s "$session_name" -c "$work_path" 2>/dev/null
-                    echo "Created session: $session_name"
-                fi
-            done
-            sleep 1
-            # Refresh sessions list after restore
-            sessions=$(tmux list-sessions -F "#{session_name}" 2>/dev/null)
-        fi
-    fi
+    restore_saved_environment "$sessions"
+    sessions=$("$TMUX_BIN" list-sessions -F '#{session_name}' 2>/dev/null)
 
     # Add extra options
     extra_options="➕  Create new session"$'\n'"❌  Kill a session"
     menu=$(printf "%s\n" "$sessions" "$extra_options")
 
     # Show fzf menu
-    choice=$(printf "%s\n" "$menu" | fzf --prompt="Select session: ")
+    choice=$(printf "%s\n" "$menu" | "$FZF_BIN" --prompt="Select session: ")
+    [[ -z "$choice" ]] && exit 0
 
     case "$choice" in
         "➕  Create new session")
             read -rp "Enter new session name: " newname
             [[ -z "$newname" ]] && continue
-            tmux new-session -s "$newname"
+            "$TMUX_BIN" new-session -s "$newname"
             ;;
         "❌  Kill a session")
             if [[ -z "$sessions" ]]; then
@@ -61,18 +90,21 @@ while true; do
                 continue
             fi
             # Pick which session to kill
-            kill_choice=$(printf "%s\n" "$sessions" | fzf --prompt="Select session to kill: ")
+            kill_choice=$(printf "%s\n" "$sessions" | "$FZF_BIN" --prompt="Select session to kill: ")
             if [[ -n "$kill_choice" ]]; then
-                tmux kill-session -t "$kill_choice"
-                # Update tmux-resurrect snapshot so it won't resurrect this session
-                "$RESURRECT_SAVE"
+                "$TMUX_BIN" kill-session -t "$kill_choice"
+
+                # Update the snapshot only while another session keeps the
+                # tmux server alive.
+                if "$TMUX_BIN" list-sessions >/dev/null 2>&1 && [[ -x "$RESURRECT_SAVE" ]]; then
+                    "$RESURRECT_SAVE"
+                fi
                 echo "Session '$kill_choice' killed."
                 sleep 1
             fi
             ;;
         *)
-            exec tmux attach-session -t "$choice"
+            exec "$TMUX_BIN" attach-session -t "$choice"
             ;;
     esac
 done
-
